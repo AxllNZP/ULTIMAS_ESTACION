@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="StateNames" load_steps=2 format=3 uid="uid://di625n3yqkv33"]
+
+[ext_resource type="Script" uid="uid://d2djbl20balp2" path="res://scenes/game_elements/characters/player/states/state_names.gd" id="1_q63yw"]
+
+[resource]
+script = ExtResource("1_q63yw")
