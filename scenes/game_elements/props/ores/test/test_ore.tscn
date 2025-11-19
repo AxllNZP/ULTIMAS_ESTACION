@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://0w75tncbttgp"]
+
+[ext_resource type="Texture2D" uid="uid://co2acqog1bc6f" path="res://assets/first_party/tiles/RPG Nature Tileset.png" id="1_vabgt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c7nnp"]
+radius = 5.0
+height = 26.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgk2l"]
+radius = 11.0
+
+[node name="TestOre" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_c7nnp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vabgt")
+hframes = 20
+vframes = 9
+frame = 22
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_qgk2l")
