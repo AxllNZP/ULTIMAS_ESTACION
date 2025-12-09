@@ -1,0 +1,96 @@
+[gd_scene load_steps=17 format=3 uid="uid://b5xpkv0snt3uu"]
+
+[ext_resource type="Texture2D" uid="uid://cm0oi5my4spb8" path="res://assets/first_party/objetcs/Sprites/roto.png" id="1_vf5nf"]
+[ext_resource type="Texture2D" uid="uid://dqwp8seer861" path="res://assets/first_party/objetcs/Animation/boceto#39_0001.png" id="1_viboa"]
+[ext_resource type="Script" uid="uid://dkvgb3uc0nlm7" path="res://scenes/game_elements/objetcts/Rock/rock.gd" id="1_vojd6"]
+[ext_resource type="Texture2D" uid="uid://boxaagoim1mnt" path="res://assets/first_party/objetcs/Animation/boceto#39_0002.png" id="2_vf5nf"]
+[ext_resource type="Texture2D" uid="uid://c4lhh1s24frv0" path="res://assets/first_party/objetcs/Animation/boceto#39_0003.png" id="3_bv2qg"]
+[ext_resource type="Texture2D" uid="uid://bq6jkc1fiqidw" path="res://assets/first_party/objetcs/Animation/boceto#39_0004.png" id="4_7a4ak"]
+[ext_resource type="Texture2D" uid="uid://dkxogupgi3vue" path="res://assets/first_party/objetcs/Animation/boceto#39_0005.png" id="5_7lgn6"]
+[ext_resource type="Texture2D" uid="uid://cn0531gssi0to" path="res://assets/first_party/objetcs/Animation/boceto#39_0006.png" id="6_cn8mq"]
+[ext_resource type="Texture2D" uid="uid://cpjf2vt4ymb6h" path="res://assets/first_party/objetcs/Animation/boceto#39_0007.png" id="7_p6pqf"]
+[ext_resource type="Texture2D" uid="uid://b182unowsp6sn" path="res://assets/first_party/objetcs/Animation/boceto#39_0008.png" id="8_njevb"]
+[ext_resource type="Texture2D" uid="uid://bwq6r58dip7xi" path="res://assets/first_party/objetcs/Animation/boceto#39_0009.png" id="9_cr47h"]
+[ext_resource type="Texture2D" uid="uid://bihbuid706q6r" path="res://assets/first_party/objetcs/untitled.png" id="10_0nxyd"]
+[ext_resource type="Texture2D" uid="uid://djiwk55kwa4sn" path="res://assets/first_party/objetcs/Sprites/boceto#39.png" id="11_lqqks"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ajjxd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_viboa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vf5nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bv2qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7a4ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7lgn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cn8mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p6pqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_njevb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cr47h")
+}],
+"loop": false,
+"name": &"breaking",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vf5nf")
+}],
+"loop": false,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_lqqks")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bv2qg"]
+radius = 7.0
+height = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqqks"]
+radius = 45.044422
+
+[node name="interactable_rock" type="StaticBody2D"]
+script = ExtResource("1_vojd6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ajjxd")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_bv2qg")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="ButtonPrompt" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_lqqks")
+
+[node name="ButtonPrompt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1.9073486e-06, -38)
+scale = Vector2(0.515625, 0.515625)
+texture = ExtResource("10_0nxyd")

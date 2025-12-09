@@ -1,0 +1,90 @@
+[gd_scene load_steps=21 format=3 uid="uid://lv5lne2p0uoe"]
+
+[ext_resource type="Script" uid="uid://1ta47qjj3jr7" path="res://scenes/Enemigo/enemigo.gd" id="1_1dkkr"]
+[ext_resource type="Texture2D" uid="uid://cy2xjetss1soa" path="res://assets/first_party/characters/enemigo/animations/1_0001.png" id="1_enltd"]
+[ext_resource type="Texture2D" uid="uid://ou1kug5vsfdr" path="res://assets/first_party/characters/enemigo/animations/1_0002.png" id="2_1dkkr"]
+[ext_resource type="Texture2D" uid="uid://bcfj1iq5bndp0" path="res://assets/first_party/characters/enemigo/animations/1_0003.png" id="3_ef2rd"]
+[ext_resource type="Texture2D" uid="uid://cofsruq8o2em5" path="res://assets/first_party/characters/enemigo/animations/1_0004.png" id="4_7uxlh"]
+[ext_resource type="Texture2D" uid="uid://c0827qgha6nlo" path="res://assets/first_party/characters/enemigo/animations/1_0005.png" id="5_458kq"]
+[ext_resource type="Texture2D" uid="uid://bvsv0dnfu3f4r" path="res://assets/first_party/characters/enemigo/animations/1_0006.png" id="6_2y1wr"]
+[ext_resource type="Texture2D" uid="uid://bh7gxxwkhjaqj" path="res://assets/first_party/characters/enemigo/animations/1_0007.png" id="7_hugv4"]
+[ext_resource type="Texture2D" uid="uid://chq53xru3f3ds" path="res://assets/first_party/characters/enemigo/animations/1_0008.png" id="8_3tb3m"]
+[ext_resource type="Texture2D" uid="uid://c5kjn1bbsyq30" path="res://assets/first_party/characters/enemigo/animations/1_0009.png" id="9_55b37"]
+[ext_resource type="Texture2D" uid="uid://lm17cn23cogb" path="res://assets/first_party/characters/enemigo/animations/1_0010.png" id="10_ousxe"]
+[ext_resource type="Texture2D" uid="uid://fn10sc3nbnrm" path="res://assets/first_party/characters/enemigo/animations/1_0011.png" id="11_87pl8"]
+[ext_resource type="Texture2D" uid="uid://0n10nuqkcj7r" path="res://assets/first_party/characters/enemigo/animations/1_0012.png" id="12_xm2ua"]
+[ext_resource type="Texture2D" uid="uid://crp1wsegqqijb" path="res://assets/first_party/characters/enemigo/animations/1_0013.png" id="13_q2tmk"]
+[ext_resource type="Texture2D" uid="uid://3x6ijp4q4ok2" path="res://assets/first_party/characters/enemigo/animations/1_0014.png" id="14_i23kr"]
+[ext_resource type="Texture2D" uid="uid://t8lnd126rntf" path="res://assets/first_party/characters/enemigo/animations/1_0015.png" id="15_gpqpc"]
+[ext_resource type="Texture2D" uid="uid://daniqgvckqnc6" path="res://assets/first_party/characters/enemigo/animations/1_0016.png" id="16_4r8wm"]
+[ext_resource type="Texture2D" uid="uid://cm1eai53dksh" path="res://assets/first_party/characters/enemigo/animations/1_0017.png" id="17_wvyoa"]
+[ext_resource type="Texture2D" uid="uid://bgfecr07tnoql" path="res://assets/first_party/characters/enemigo/animations/1_0018.png" id="18_wt2lo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j0jxb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_enltd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1dkkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ef2rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7uxlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_458kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2y1wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hugv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3tb3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_55b37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ousxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_87pl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xm2ua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_q2tmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_i23kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gpqpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4r8wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wvyoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wt2lo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Enemigo" type="Node2D"]
+script = ExtResource("1_1dkkr")
+
+[node name="Sprite_enemigo" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_j0jxb")
+frame_progress = 0.054647997

@@ -1,0 +1,621 @@
+[gd_scene load_steps=125 format=3 uid="uid://bmry0a7chw3wj"]
+
+[ext_resource type="PackedScene" uid="uid://bwoo7h6k86jfi" path="res://scenes/player/player.tscn" id="1_eru6m"]
+[ext_resource type="Texture2D" uid="uid://4tq44a1q5br7" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#1.png" id="2_e0snu"]
+[ext_resource type="Texture2D" uid="uid://bkuhfejkup18r" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#2.png" id="3_qcmor"]
+[ext_resource type="Texture2D" uid="uid://wihkh784jxd5" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#3.png" id="4_k83bw"]
+[ext_resource type="Texture2D" uid="uid://v2axbnmn7ge4" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#4.png" id="5_546bm"]
+[ext_resource type="Texture2D" uid="uid://e6o1o84x375k" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#5.png" id="6_54xn6"]
+[ext_resource type="Texture2D" uid="uid://dhbdbuo3epdqs" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#6.png" id="7_egdfe"]
+[ext_resource type="Texture2D" uid="uid://bhcfl0gbvoo4d" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#7.png" id="8_op83x"]
+[ext_resource type="Texture2D" uid="uid://dp5rxp6jkfaug" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#8.png" id="9_lr5mr"]
+[ext_resource type="Texture2D" uid="uid://dxbyhq4dh7rid" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#9.png" id="10_meqej"]
+[ext_resource type="Texture2D" uid="uid://ct4nad2hqqjdf" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#10.png" id="11_rt8er"]
+[ext_resource type="Texture2D" uid="uid://bt0ly4n0mn12g" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#11.png" id="12_0vnjo"]
+[ext_resource type="Texture2D" uid="uid://7ubm32453mqc" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#12.png" id="13_xr6xy"]
+[ext_resource type="Texture2D" uid="uid://s7lb7py5acjb" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#13.png" id="14_58hek"]
+[ext_resource type="Texture2D" uid="uid://bfj2y0xbhfqyn" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#14.png" id="15_6hu2g"]
+[ext_resource type="Texture2D" uid="uid://cepgpyoii23kw" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#15.png" id="16_4s111"]
+[ext_resource type="Texture2D" uid="uid://i5o0jgmmmk3x" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#16.png" id="17_4oxe4"]
+[ext_resource type="Texture2D" uid="uid://byyyejmai3lpr" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#18.png" id="18_546bm"]
+[ext_resource type="Texture2D" uid="uid://o7tk0tgv8b5d" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#17.png" id="18_ixt2v"]
+[ext_resource type="Texture2D" uid="uid://b3dpeo6x52if3" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#19.png" id="19_54xn6"]
+[ext_resource type="Texture2D" uid="uid://de4dfa1le6bte" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#20.png" id="20_egdfe"]
+[ext_resource type="Texture2D" uid="uid://cgmyfi7tt524n" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#21.png" id="22_meqej"]
+[ext_resource type="Texture2D" uid="uid://p0hp6lohhp5a" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#22.png" id="23_rt8er"]
+[ext_resource type="Texture2D" uid="uid://txyoeqpl7060" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#23.png" id="24_0vnjo"]
+[ext_resource type="Texture2D" uid="uid://dkmojvssautjy" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#24.png" id="25_xr6xy"]
+[ext_resource type="Texture2D" uid="uid://brxeyubhrrr8y" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#25.png" id="26_58hek"]
+[ext_resource type="Texture2D" uid="uid://csddc2bk5buhb" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0001.png" id="28_j1hrk"]
+[ext_resource type="Texture2D" uid="uid://k0c5a5tamm5j" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0002.png" id="29_xcopb"]
+[ext_resource type="Texture2D" uid="uid://xlnf60a7mlsa" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0003.png" id="30_x602w"]
+[ext_resource type="Texture2D" uid="uid://r2k36vos7es" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0004.png" id="31_or167"]
+[ext_resource type="Texture2D" uid="uid://dlqtng7issq41" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0005.png" id="32_pabt8"]
+[ext_resource type="Texture2D" uid="uid://dsgo3v7bpyua6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0006.png" id="33_clc6n"]
+[ext_resource type="Texture2D" uid="uid://1k7rw1md4g8k" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0007.png" id="34_oe76s"]
+[ext_resource type="Texture2D" uid="uid://clj0o6cl2junm" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0008.png" id="35_84pcj"]
+[ext_resource type="Texture2D" uid="uid://dg7ql6nvhxr2a" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0009.png" id="36_5ttye"]
+[ext_resource type="Texture2D" uid="uid://618ryd4ckvhr" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_01_animation/boceto#34_0010.png" id="37_wehra"]
+[ext_resource type="Texture2D" uid="uid://cityhrf0ru8co" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0001.png" id="38_ew4k1"]
+[ext_resource type="Texture2D" uid="uid://e1rieak7n8s1" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0002.png" id="39_6xlos"]
+[ext_resource type="Texture2D" uid="uid://b0h1tkjyh0bqr" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0003.png" id="40_y5u8q"]
+[ext_resource type="Texture2D" uid="uid://dn5dmyblju683" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0004.png" id="41_rh5pu"]
+[ext_resource type="Texture2D" uid="uid://digyfejtj1tdu" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0005.png" id="42_hpall"]
+[ext_resource type="Texture2D" uid="uid://dw8h1wq8x5swt" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0006.png" id="43_oo7qc"]
+[ext_resource type="Texture2D" uid="uid://n0bpal1x0mjj" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0007.png" id="44_ocndo"]
+[ext_resource type="Texture2D" uid="uid://dmdaerla1u1wp" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0008.png" id="45_0uapp"]
+[ext_resource type="Texture2D" uid="uid://dt72a2387c3lm" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0009.png" id="46_uur8p"]
+[ext_resource type="Texture2D" uid="uid://2v1wdhcwac8s" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0010.png" id="47_04gw2"]
+[ext_resource type="Texture2D" uid="uid://dqacnlki00su6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_02_animation/boceto#35_0011.png" id="48_del6e"]
+[ext_resource type="Texture2D" uid="uid://dbpauemhyinvt" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0001.png" id="49_ou86t"]
+[ext_resource type="Texture2D" uid="uid://bttqvh5bfkf07" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0002.png" id="50_5o1px"]
+[ext_resource type="Texture2D" uid="uid://cnboxpaby0jjw" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0003.png" id="51_b44sy"]
+[ext_resource type="Texture2D" uid="uid://4nag8yykgswq" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0004.png" id="52_dk6b3"]
+[ext_resource type="Texture2D" uid="uid://clmoojbapnh2e" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0005.png" id="53_ekjab"]
+[ext_resource type="Texture2D" uid="uid://gxwgrntx51ub" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0006.png" id="54_g2w2k"]
+[ext_resource type="Texture2D" uid="uid://dj6w40awrrqqg" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0007.png" id="55_gqk7x"]
+[ext_resource type="Texture2D" uid="uid://mpowfiv1rsvt" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0008.png" id="56_qr75q"]
+[ext_resource type="Texture2D" uid="uid://myudy4f6kleb" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0009.png" id="57_b4ig8"]
+[ext_resource type="Texture2D" uid="uid://n4qkxqhnwo2o" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0010.png" id="58_mnv1j"]
+[ext_resource type="Texture2D" uid="uid://dydt6l7gwr0v4" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0011.png" id="59_lvsay"]
+[ext_resource type="Texture2D" uid="uid://cnj0merrpjglh" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0012.png" id="60_wt8ar"]
+[ext_resource type="Texture2D" uid="uid://cmjtj0fyey5l6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_03_animation/boceto#36_0013.png" id="61_xb718"]
+[ext_resource type="Texture2D" uid="uid://c71vcs8y45v4r" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0001.png" id="62_xb718"]
+[ext_resource type="Texture2D" uid="uid://cey3tbklm4qa7" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0002.png" id="63_ucp4t"]
+[ext_resource type="Texture2D" uid="uid://bh8gtobuogk8p" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0003.png" id="64_3qy4e"]
+[ext_resource type="Texture2D" uid="uid://ysphwybexir8" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0004.png" id="65_17hr5"]
+[ext_resource type="Texture2D" uid="uid://4yulnldmbji4" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0005.png" id="66_1xixv"]
+[ext_resource type="Texture2D" uid="uid://cxaok6vd42yof" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0006.png" id="67_t4vqi"]
+[ext_resource type="Texture2D" uid="uid://li7qyqt0x41q" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0007.png" id="68_14stl"]
+[ext_resource type="Texture2D" uid="uid://bknrevimncce2" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0008.png" id="69_jod50"]
+[ext_resource type="Texture2D" uid="uid://d3lis5wbm5ke6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0009.png" id="70_sdfxs"]
+[ext_resource type="Texture2D" uid="uid://dm4knf271n2sm" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0010.png" id="71_qhna7"]
+[ext_resource type="Texture2D" uid="uid://buwaxuuwgdlwu" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0011.png" id="72_xxq4e"]
+[ext_resource type="Texture2D" uid="uid://ump2wabyugbh" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_04_animation/boceto#37_0012.png" id="73_6iwsu"]
+[ext_resource type="Texture2D" uid="uid://cjmpjdssa6dmf" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0001.png" id="74_qks5j"]
+[ext_resource type="Texture2D" uid="uid://cfj6dvnru1843" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0002.png" id="75_7ws1v"]
+[ext_resource type="Texture2D" uid="uid://vk2crhwv8r3a" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0003.png" id="76_f7i14"]
+[ext_resource type="Texture2D" uid="uid://b3w6nc1rgaler" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0004.png" id="77_ofyuk"]
+[ext_resource type="Texture2D" uid="uid://c05t4fla3yp6u" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0005.png" id="78_8it3l"]
+[ext_resource type="Texture2D" uid="uid://cl682jv3qru17" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0006.png" id="79_rkwjd"]
+[ext_resource type="Texture2D" uid="uid://bm87po5wpkwbw" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0007.png" id="80_wmhww"]
+[ext_resource type="Texture2D" uid="uid://bbsobleu7u25u" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0008.png" id="81_04b8x"]
+[ext_resource type="Texture2D" uid="uid://dd038aohqr2jl" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0009.png" id="82_2qn5v"]
+[ext_resource type="Texture2D" uid="uid://djsr7ghoks48w" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0010.png" id="83_bnn24"]
+[ext_resource type="Texture2D" uid="uid://dm4xugff1xkv7" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0011.png" id="84_swnvg"]
+[ext_resource type="Texture2D" uid="uid://bs8fhshjmnw8c" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0012.png" id="85_80ta6"]
+[ext_resource type="Texture2D" uid="uid://cd2y6v7jh68kq" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0013.png" id="86_hp31q"]
+[ext_resource type="Texture2D" uid="uid://hckuhla8idfl" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0014.png" id="87_0uafu"]
+[ext_resource type="Texture2D" uid="uid://pvqbvfkw27fm" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0015.png" id="88_g1fms"]
+[ext_resource type="Texture2D" uid="uid://cciphlwf3j1mw" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0016.png" id="89_slmln"]
+[ext_resource type="Texture2D" uid="uid://bpodqqh1204q6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0017.png" id="90_4qnfa"]
+[ext_resource type="Texture2D" uid="uid://cgewwcvoj83h6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0018.png" id="91_ggii8"]
+[ext_resource type="Texture2D" uid="uid://dsu1left4jci6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0019.png" id="92_c5r8f"]
+[ext_resource type="Texture2D" uid="uid://cuhcf6hrlxke" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0020.png" id="93_aum4u"]
+[ext_resource type="Texture2D" uid="uid://dbg8m6ky17iyp" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0021.png" id="94_goouw"]
+[ext_resource type="Texture2D" uid="uid://dqjukrgnq2k4l" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_05_animation/sin título_0022.png" id="95_36gam"]
+[ext_resource type="Texture2D" uid="uid://jgwf0vfangd8" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0001.png" id="96_4qnfa"]
+[ext_resource type="Texture2D" uid="uid://d2syputywjfff" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0002.png" id="97_ggii8"]
+[ext_resource type="Texture2D" uid="uid://dpqai8ip2qlsd" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0003.png" id="98_c5r8f"]
+[ext_resource type="Texture2D" uid="uid://4uei8t8ymisq" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0004.png" id="99_aum4u"]
+[ext_resource type="Texture2D" uid="uid://bhbhnuotblvma" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0005.png" id="100_goouw"]
+[ext_resource type="Texture2D" uid="uid://bhqvewbg046hn" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0006.png" id="101_36gam"]
+[ext_resource type="Texture2D" uid="uid://bewypu7fowdhn" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0007.png" id="102_0q88g"]
+[ext_resource type="Texture2D" uid="uid://cq3gmlppnmgo" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0008.png" id="103_sdpfw"]
+[ext_resource type="Texture2D" uid="uid://beory4hi5rwy4" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0009.png" id="104_6me8h"]
+[ext_resource type="Texture2D" uid="uid://dpoqoad82uhf5" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0010.png" id="105_l8jon"]
+[ext_resource type="Texture2D" uid="uid://bhcv8hij2yt57" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0011.png" id="106_uhlgh"]
+[ext_resource type="Texture2D" uid="uid://dphysui6ld4km" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0012.png" id="107_alkb0"]
+[ext_resource type="Texture2D" uid="uid://djl4bkj84afat" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0013.png" id="108_s13l5"]
+[ext_resource type="Texture2D" uid="uid://dwc4ysgd2tw18" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0014.png" id="109_bemnx"]
+[ext_resource type="Texture2D" uid="uid://cnd6epea03fc6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0015.png" id="110_s36bm"]
+[ext_resource type="Texture2D" uid="uid://2ghjr6s5njih" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0016.png" id="111_3i8x3"]
+[ext_resource type="PackedScene" uid="uid://b5xpkv0snt3uu" path="res://scenes/game_elements/objetcts/Rock/interactable_rock.tscn" id="111_4qnfa"]
+[ext_resource type="PackedScene" uid="uid://co33h1e1pgkbi" path="res://scenes/Enemigo/enemie_move.tscn" id="112_ggii8"]
+[ext_resource type="Texture2D" uid="uid://d2lglfkc0gnld" path="res://assets/first_party/objetcs/Sprites/fondo.png" id="113_aum4u"]
+[ext_resource type="PackedScene" uid="uid://b15dn6msa23vg" path="res://scenes/Enemigo/enemie_spritesheet/enemie.tscn" id="113_c5r8f"]
+[ext_resource type="Texture2D" uid="uid://dek1f0t7ircy8" path="res://assets/first_party/characters/enemigo/sprites/Cientifico.png" id="115_sdpfw"]
+[ext_resource type="Texture2D" uid="uid://csloujjprh75s" path="res://assets/first_party/characters/enemigo/sprites/CIENTIFICO_M.png" id="116_6me8h"]
+[ext_resource type="Texture2D" uid="uid://b8jsh3t3hhxja" path="res://assets/first_party/characters/enemigo/sprites/HDB.png" id="117_l8jon"]
+[ext_resource type="Texture2D" uid="uid://g47djyqol6ks" path="res://assets/first_party/characters/enemigo/sprites/Soldado_misterioso.png" id="118_uhlgh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j1hrk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_j1hrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xcopb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_x602w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_or167")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pabt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_clc6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_oe76s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_84pcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_5ttye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_wehra")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ew4k1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_ew4k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_6xlos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_y5u8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_rh5pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_hpall")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_oo7qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ocndo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_0uapp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_uur8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_04gw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_del6e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tbxjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_ou86t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_5o1px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_b44sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_dk6b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ekjab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_g2w2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_gqk7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_qr75q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_b4ig8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_mnv1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_lvsay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_wt8ar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_xb718")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkkiq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_xb718")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ucp4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3qy4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_17hr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_1xixv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_t4vqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_14stl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_jod50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_sdfxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_qhna7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_xxq4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_6iwsu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0q88g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("74_qks5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7ws1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_f7i14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_ofyuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_8it3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_rkwjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_wmhww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_04b8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_2qn5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_bnn24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_swnvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_80ta6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_hp31q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_0uafu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_g1fms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_slmln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_4qnfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_ggii8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_c5r8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_aum4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_goouw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_36gam")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8wr3x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("96_4qnfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_ggii8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_c5r8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_aum4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_goouw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_36gam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_0q88g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_sdpfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_6me8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_l8jon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_uhlgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_alkb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_s13l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_bemnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_s36bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_3i8x3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="TestPlayer" type="Node2D"]
+
+[node name="Boceto#19" type="Sprite2D" parent="."]
+position = Vector2(-2, 124)
+texture = ExtResource("19_54xn6")
+
+[node name="Boceto#20" type="Sprite2D" parent="."]
+position = Vector2(-5, 934)
+texture = ExtResource("19_54xn6")
+
+[node name="Boceto#21" type="Sprite2D" parent="."]
+position = Vector2(-472.02258, 523)
+rotation = 1.5707964
+scale = Vector2(1, 1.2031465)
+texture = ExtResource("19_54xn6")
+
+[node name="Boceto#22" type="Sprite2D" parent="."]
+position = Vector2(475.1477, 528)
+rotation = 1.5707964
+scale = Vector2(1, 1.2212842)
+texture = ExtResource("19_54xn6")
+
+[node name="Boceto#1" type="Sprite2D" parent="."]
+position = Vector2(113, -108)
+texture = ExtResource("2_e0snu")
+
+[node name="Boceto#2" type="Sprite2D" parent="."]
+position = Vector2(119, -31)
+texture = ExtResource("3_qcmor")
+
+[node name="Boceto#3" type="Sprite2D" parent="."]
+position = Vector2(-113, -109)
+texture = ExtResource("4_k83bw")
+
+[node name="Boceto#4" type="Sprite2D" parent="."]
+position = Vector2(-125, -31)
+texture = ExtResource("5_546bm")
+
+[node name="Boceto#5" type="Sprite2D" parent="."]
+position = Vector2(123, 53)
+texture = ExtResource("6_54xn6")
+
+[node name="Boceto#6" type="Sprite2D" parent="."]
+position = Vector2(-116, 47)
+texture = ExtResource("7_egdfe")
+
+[node name="Boceto#7" type="Sprite2D" parent="."]
+position = Vector2(120, 134)
+texture = ExtResource("8_op83x")
+
+[node name="Boceto#8" type="Sprite2D" parent="."]
+position = Vector2(-112, 139)
+texture = ExtResource("9_lr5mr")
+
+[node name="Boceto#9" type="Sprite2D" parent="."]
+position = Vector2(124, 218)
+texture = ExtResource("10_meqej")
+
+[node name="Boceto#10" type="Sprite2D" parent="."]
+position = Vector2(-125, 214)
+texture = ExtResource("11_rt8er")
+
+[node name="Boceto#11" type="Sprite2D" parent="."]
+position = Vector2(119, 305)
+texture = ExtResource("12_0vnjo")
+
+[node name="Boceto#12" type="Sprite2D" parent="."]
+position = Vector2(-130, 298)
+texture = ExtResource("13_xr6xy")
+
+[node name="Boceto#13" type="Sprite2D" parent="."]
+position = Vector2(-125, 377)
+texture = ExtResource("14_58hek")
+
+[node name="Boceto#14" type="Sprite2D" parent="."]
+position = Vector2(126, 373)
+texture = ExtResource("15_6hu2g")
+
+[node name="Boceto#15" type="Sprite2D" parent="."]
+position = Vector2(246, 381)
+texture = ExtResource("16_4s111")
+
+[node name="Boceto#16" type="Sprite2D" parent="."]
+position = Vector2(337, 382)
+texture = ExtResource("17_4oxe4")
+
+[node name="Boceto#17" type="Sprite2D" parent="."]
+position = Vector2(432, 384)
+texture = ExtResource("18_ixt2v")
+
+[node name="Boceto#18" type="Sprite2D" parent="."]
+position = Vector2(-209, 391)
+texture = ExtResource("18_546bm")
+
+[node name="Boceto#23" type="Sprite2D" parent="."]
+position = Vector2(-1, 526)
+texture = ExtResource("20_egdfe")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -78.0
+offset_top = -172.0
+offset_right = 81.0
+offset_bottom = -149.0
+text = "ESCENA CONCEPTOS"
+
+[node name="Boceto#24" type="Sprite2D" parent="."]
+position = Vector2(527, 390)
+texture = ExtResource("22_meqej")
+
+[node name="Boceto#25" type="Sprite2D" parent="."]
+position = Vector2(-285, 389)
+texture = ExtResource("23_rt8er")
+
+[node name="Boceto#26" type="Sprite2D" parent="."]
+position = Vector2(-371, 392)
+texture = ExtResource("24_0vnjo")
+
+[node name="Boceto#27" type="Sprite2D" parent="."]
+position = Vector2(-480, 381)
+texture = ExtResource("25_xr6xy")
+
+[node name="Boceto#28" type="Sprite2D" parent="."]
+position = Vector2(568, 862)
+texture = ExtResource("26_58hek")
+
+[node name="animation_01" type="AnimatedSprite2D" parent="."]
+auto_translate_mode = 1
+position = Vector2(173, -108)
+sprite_frames = SubResource("SpriteFrames_j1hrk")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.3813229
+
+[node name="animation_02" type="AnimatedSprite2D" parent="."]
+position = Vector2(177, -30)
+sprite_frames = SubResource("SpriteFrames_ew4k1")
+autoplay = "default"
+frame_progress = 0.6199128
+
+[node name="animation_03" type="AnimatedSprite2D" parent="."]
+position = Vector2(-173, -112)
+sprite_frames = SubResource("SpriteFrames_tbxjf")
+autoplay = "default"
+frame_progress = 0.086838685
+
+[node name="animation_04" type="AnimatedSprite2D" parent="."]
+position = Vector2(-193, -34)
+sprite_frames = SubResource("SpriteFrames_tkkiq")
+autoplay = "default"
+frame_progress = 0.9393449
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(171, 52)
+sprite_frames = SubResource("SpriteFrames_0q88g")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-180, 43)
+sprite_frames = SubResource("SpriteFrames_8wr3x")
+autoplay = "default"
+frame_progress = 0.10530432
+
+[node name="interactable_rock2" parent="." instance=ExtResource("111_4qnfa")]
+position = Vector2(268, 134)
+
+[node name="interactable_rock" parent="." instance=ExtResource("111_4qnfa")]
+position = Vector2(-270, 136)
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(756, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("113_aum4u")
+
+[node name="Player" parent="." instance=ExtResource("1_eru6m")]
+
+[node name="Capsula" parent="." instance=ExtResource("113_c5r8f")]
+position = Vector2(753, -67)
+scale = Vector2(0.15, 0.15)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("112_ggii8")]
+position = Vector2(-179, 261)
+
+[node name="Cientifico" type="Sprite2D" parent="."]
+position = Vector2(1155, -54)
+texture = ExtResource("115_sdpfw")
+
+[node name="CientificoM" type="Sprite2D" parent="."]
+position = Vector2(1228, -71)
+texture = ExtResource("116_6me8h")
+
+[node name="Hdb" type="Sprite2D" parent="."]
+position = Vector2(1308, -58)
+texture = ExtResource("117_l8jon")
+
+[node name="SoldadoMisterioso" type="Sprite2D" parent="."]
+position = Vector2(1370, -58)
+texture = ExtResource("118_uhlgh")

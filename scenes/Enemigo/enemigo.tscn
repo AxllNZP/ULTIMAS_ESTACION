@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://lv5lne2p0uoe"]
+
+[ext_resource type="Script" uid="uid://cbh5e55xltaxu" path="res://scenes/scripts/Enemigos/enemigo.gd" id="1_5cx2t"]
+[ext_resource type="Texture2D" uid="uid://p0hp6lohhp5a" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#22.png" id="2_upvfi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5cx2t"]
+radius = 15.0
+height = 52.0
+
+[node name="Enemigo" type="CharacterBody2D"]
+script = ExtResource("1_5cx2t")
+player_path = NodePath(".")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_upvfi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 8)
+shape = SubResource("CapsuleShape2D_5cx2t")

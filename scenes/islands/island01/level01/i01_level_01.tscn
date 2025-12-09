@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://c5ogygftr4xo5"]
 
 [ext_resource type="Texture2D" uid="uid://6riy6jf124eo" path="res://assets/first_party/tiles/tile_template.png" id="1_iismh"]
-[ext_resource type="PackedScene" uid="uid://c0bsba3wjs3k" path="res://scenes/game_elements/characters/player/player.tscn" id="2_0pg1r"]
+[ext_resource type="PackedScene" uid="uid://c0bsba3wjs3k" path="res://assets/first_party/characters/player/player.tscn" id="2_0pg1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iismh"]
 texture = ExtResource("1_iismh")
