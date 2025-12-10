@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=3 uid="uid://bmry0a7chw3wj"]
+[gd_scene load_steps=124 format=3 uid="uid://bmry0a7chw3wj"]
 
 [ext_resource type="PackedScene" uid="uid://bwoo7h6k86jfi" path="res://scenes/player/player.tscn" id="1_eru6m"]
 [ext_resource type="Texture2D" uid="uid://4tq44a1q5br7" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#1.png" id="2_e0snu"]
@@ -111,7 +111,6 @@
 [ext_resource type="Texture2D" uid="uid://cnd6epea03fc6" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0015.png" id="110_s36bm"]
 [ext_resource type="Texture2D" uid="uid://2ghjr6s5njih" path="res://assets/first_party/characters/enemigo/animation_enemies/enemigo_06_animation/boceto#38_0016.png" id="111_3i8x3"]
 [ext_resource type="PackedScene" uid="uid://b5xpkv0snt3uu" path="res://scenes/game_elements/objetcts/Rock/interactable_rock.tscn" id="111_4qnfa"]
-[ext_resource type="PackedScene" uid="uid://co33h1e1pgkbi" path="res://scenes/Enemigo/enemie_move.tscn" id="112_ggii8"]
 [ext_resource type="Texture2D" uid="uid://d2lglfkc0gnld" path="res://assets/first_party/objetcs/Sprites/fondo.png" id="113_aum4u"]
 [ext_resource type="PackedScene" uid="uid://b15dn6msa23vg" path="res://scenes/Enemigo/enemie_spritesheet/enemie.tscn" id="113_c5r8f"]
 [ext_resource type="Texture2D" uid="uid://dek1f0t7ircy8" path="res://assets/first_party/characters/enemigo/sprites/Cientifico.png" id="115_sdpfw"]
@@ -595,27 +594,24 @@ position = Vector2(756, 0)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("113_aum4u")
 
-[node name="Player" parent="." instance=ExtResource("1_eru6m")]
-
-[node name="Capsula" parent="." instance=ExtResource("113_c5r8f")]
-position = Vector2(753, -67)
-scale = Vector2(0.15, 0.15)
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("112_ggii8")]
-position = Vector2(-179, 261)
+[node name="CientificoM" type="Sprite2D" parent="."]
+position = Vector2(1228, -71)
+texture = ExtResource("116_6me8h")
 
 [node name="Cientifico" type="Sprite2D" parent="."]
 position = Vector2(1155, -54)
 texture = ExtResource("115_sdpfw")
 
-[node name="CientificoM" type="Sprite2D" parent="."]
-position = Vector2(1228, -71)
-texture = ExtResource("116_6me8h")
-
 [node name="Hdb" type="Sprite2D" parent="."]
 position = Vector2(1308, -58)
 texture = ExtResource("117_l8jon")
 
+[node name="Capsula" parent="." instance=ExtResource("113_c5r8f")]
+position = Vector2(753, -67)
+scale = Vector2(0.15, 0.15)
+
 [node name="SoldadoMisterioso" type="Sprite2D" parent="."]
 position = Vector2(1370, -58)
 texture = ExtResource("118_uhlgh")
+
+[node name="Player" parent="." instance=ExtResource("1_eru6m")]

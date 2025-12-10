@@ -1,0 +1,68 @@
+[gd_scene load_steps=12 format=3 uid="uid://wsbnuba133vo"]
+
+[ext_resource type="Texture2D" uid="uid://d2lglfkc0gnld" path="res://assets/first_party/objetcs/Sprites/fondo.png" id="1_epa5j"]
+[ext_resource type="PackedScene" uid="uid://n6p1wcdyijtt" path="res://scenes/player/Jugador.tscn" id="2_20u4s"]
+[ext_resource type="PackedScene" uid="uid://4ifmn41nsggy" path="res://scenes/JEFE/Jefe.tscn" id="3_se3fn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_13eax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20u4s"]
+size = Vector2(629, 100)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_se3fn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se3fn"]
+size = Vector2(868.5, 89)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4pw2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13eax"]
+size = Vector2(84, 374.5)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4mg2s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pw2f"]
+size = Vector2(87, 364)
+
+[node name="LabArena" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_epa5j")
+
+[node name="Wall_Top" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_13eax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Top"]
+position = Vector2(-13, -231)
+shape = SubResource("RectangleShape2D_20u4s")
+
+[node name="Wall_Bottom" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_se3fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Bottom"]
+position = Vector2(31, 202)
+shape = SubResource("RectangleShape2D_se3fn")
+
+[node name="Wall_Left" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_4pw2f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Left"]
+position = Vector2(-265, -10)
+shape = SubResource("RectangleShape2D_13eax")
+
+[node name="Wall_Right" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_4mg2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Right"]
+position = Vector2(260, -22)
+shape = SubResource("RectangleShape2D_4pw2f")
+
+[node name="JUGADOR" parent="." groups=["player"] instance=ExtResource("2_20u4s")]
+position = Vector2(-4, 91)
+collision_layer = 4
+collision_mask = 8
+
+[node name="Jefe" parent="." groups=["player"] instance=ExtResource("3_se3fn")]
+position = Vector2(-16, -76)
+collision_layer = 8
+collision_mask = 4
