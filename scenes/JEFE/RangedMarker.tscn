@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://0emb2ht6e4h"]
+
+[ext_resource type="Texture2D" uid="uid://bihbuid706q6r" path="res://assets/first_party/objetcs/untitled.png" id="1_6j156"]
+
+[node name="RangedMarker" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.0063706073, 0, 0, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_6j156")

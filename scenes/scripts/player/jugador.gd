@@ -10,7 +10,7 @@ extends CharacterBody2D
 
 # Variables del ataque
 @export var attack_duration: float = 0.4
-@export var attack_damage: int = 25  # Daño que hace el jugador
+@export var attack_damage: int = 10  # Daño que hace el jugador (reducido de 25 a 10)
 @export var hitbox_distance: float = 50.0  # Distancia del hitbox desde el personaje
 @export var hitbox_size: Vector2 = Vector2(40, 40)  # Tamaño del hitbox
 
@@ -19,7 +19,7 @@ extends CharacterBody2D
 
 # Referencias a los dos AnimatedSprite2D (ajusta las rutas según tu jerarquía)
 @onready var idle_sprite = $Idle
-@onready var move_sprite = $move
+@onready var move_sprite = $Move
 @onready var attack_sprite = $Attack  # Nuevo sprite para ataques
 @onready var hitbox = $Hitbox  # Area2D para detectar colisiones
 @onready var hitbox_collision = $Hitbox/CollisionShape2D
@@ -177,71 +177,87 @@ func start_dash():
 	can_dash = true
 
 func start_attack():
-	if is_attacking: return # Evita spam de ataques
 	is_attacking = true
 	
-	# 1. Configurar Animación
-	if attack_sprite:
+	# Mostrar sprite de ataque y ocultar otros
+	if attack_sprite and idle_sprite and move_sprite:
 		idle_sprite.visible = false
-		move_sprite.visible = false
+		move_sprite.visible = true
 		attack_sprite.visible = true
 		
+		# Reproducir animación de ataque
 		var animation_name = get_animation_name(last_direction)
 		if attack_sprite.sprite_frames.has_animation(animation_name):
 			attack_sprite.play(animation_name)
-
-	# 2. Posicionar antes de activar
-	position_hitbox(last_direction)
+		else:
+			print("⚠️ Animación NO encontrada en Attack: '" + animation_name + "'")
 	
-	# 3. Activar el daño (Usando los métodos del addon)
+	# Posicionar y activar hitbox
+	position_hitbox(last_direction)
 	activate_hitbox()
 	
-	# 4. Esperar a que termine la animación
-	# Si tu animación dura exactamente 0.4s, el await está bien.
+	# Timer para la duración del ataque
 	await get_tree().create_timer(attack_duration).timeout
 	
-	# 5. Limpieza final
+	# Desactivar hitbox y terminar ataque
 	deactivate_hitbox()
 	is_attacking = false
+	
+	# Volver a idle
 	show_idle_animation(last_direction)
 
 func position_hitbox(direction: Vector2):
-	if hitbox == null: return
+	if hitbox == null or hitbox_collision == null:
+		return
 	
-	# Normalizamos para que la distancia sea siempre constante
+	# Normalizar la dirección
 	var dir = direction.normalized()
 	
-	# Posición relativa al jugador:
-	# Multiplicamos la dirección por la distancia configurada
+	# Posicionar el hitbox en la dirección del ataque
 	hitbox.position = dir * hitbox_distance
 	
-	# Rotación: Importante si tu hitbox es rectangular (como una espada)
-	# para que siempre apunte hacia afuera del jugador.
-	hitbox.rotation = direction.angle()
+	# Ajustar la rotación del hitbox según la dirección
+	var angle = direction.angle()
+	hitbox.rotation = angle
+	
+	# Ajustar el tamaño del CollisionShape2D
+	if hitbox_collision.shape is RectangleShape2D:
+		hitbox_collision.shape.size = hitbox_size
 
 func activate_hitbox():
-	# Si es el nodo del addon, activamos su monitoreo
-	if hitbox:
+	if hitbox and hitbox_collision:
 		hitbox.monitoring = true
-		hitbox_collision.set_deferred("disabled", false)
+		hitbox_collision.disabled = false
 
 func deactivate_hitbox():
-	if hitbox:
+	if hitbox and hitbox_collision:
 		hitbox.monitoring = false
-		hitbox_collision.set_deferred("disabled", true)
+		hitbox_collision.disabled = true
 
 # Cuando el hitbox del jugador golpea un área (como el BasicHurtBox2D del jefe)
 func _on_hitbox_area_entered(area):
 	if area.is_in_group("hurtbox"):
-		# Hacer daño al enemigo
-		if area.owner.has_node("Health"):
+		# Verificar que el enemigo no esté muerto
+		if area.owner and area.owner.has_node("Health"):
 			var enemy_health = area.owner.get_node("Health")
-			enemy_health.damage(attack_damage)
-			print("¡Golpeaste al enemigo! Daño: " + str(attack_damage))
+			# Verificar si tiene la propiedad 'is_dead' o si la vida es mayor a 0
+			var enemy_is_alive = true
+			if "health" in enemy_health:
+				enemy_is_alive = enemy_health.health > 0
+			
+			if enemy_is_alive:
+				enemy_health.damage(attack_damage)
+				print("¡Golpeaste al enemigo! Daño: " + str(attack_damage))
 
 # Cuando el hitbox del jugador golpea un cuerpo (por si usas otro método)
 func _on_hitbox_body_entered(body):
+	# Verificar que el enemigo no esté muerto
 	if body.has_node("Health"):
 		var enemy_health = body.get_node("Health")
-		enemy_health.damage(attack_damage)
-		print("¡Golpeaste al enemigo! Daño: " + str(attack_damage))
+		var enemy_is_alive = true
+		if "health" in enemy_health:
+			enemy_is_alive = enemy_health.health > 0
+		
+		if enemy_is_alive and not body.get("is_dead"):
+			enemy_health.damage(attack_damage)
+			print("¡Golpeaste al enemigo! Daño: " + str(attack_damage))

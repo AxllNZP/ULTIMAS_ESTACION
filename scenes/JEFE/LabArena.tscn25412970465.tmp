@@ -3,11 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://d2lglfkc0gnld" path="res://assets/first_party/objetcs/Sprites/fondo.png" id="1_epa5j"]
 [ext_resource type="PackedScene" uid="uid://n6p1wcdyijtt" path="res://scenes/player/Jugador.tscn" id="2_20u4s"]
 [ext_resource type="PackedScene" uid="uid://4ifmn41nsggy" path="res://scenes/JEFE/Jefe.tscn" id="3_se3fn"]
-[ext_resource type="PackedScene" uid="uid://0emb2ht6e4h" path="res://scenes/JEFE/RangedMarker.tscn" id="4_4pw2f"]
-[ext_resource type="PackedScene" uid="uid://dj0ilpm378655" path="res://scenes/JEFE/RangedHitbox.tscn" id="5_4mg2s"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_13eax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20u4s"]
 size = Vector2(629, 100)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_se3fn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_se3fn"]
 size = Vector2(868.5, 89)
@@ -28,16 +30,16 @@ size = Vector2(87, 364)
 texture = ExtResource("1_epa5j")
 
 [node name="Wall_Top" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_13eax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Top"]
 position = Vector2(-13, -231)
 shape = SubResource("RectangleShape2D_20u4s")
 
 [node name="Wall_Bottom" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_se3fn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Bottom"]
-light_mask = 0
-visibility_layer = 17
 position = Vector2(31, 202)
 shape = SubResource("RectangleShape2D_se3fn")
 
@@ -57,9 +59,9 @@ shape = SubResource("RectangleShape2D_4pw2f")
 
 [node name="JUGADOR" parent="." groups=["player"] instance=ExtResource("2_20u4s")]
 position = Vector2(-9, 84)
+collision_mask = 18
 
 [node name="Jefe" parent="." groups=["player"] instance=ExtResource("3_se3fn")]
 position = Vector2(-1, -63)
-collision_mask = 4
-ranged_marker_scene = ExtResource("4_4pw2f")
-ranged_hitbox_scene = ExtResource("5_4mg2s")
+collision_layer = 2
+collision_mask = 5
