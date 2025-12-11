@@ -163,7 +163,7 @@ func _physics_process(delta):
 	# ===== ACTUALIZAR MARCADOR DE ATAQUE A DISTANCIA =====
 	if ranged_attack_active and ranged_marker_instance and is_instance_valid(ranged_marker_instance):
 		ranged_target_position = player.global_position
-		ranged_marker_instance.global_position = ranged_target_position
+		#ranged_marker_instance.global_position = ranged_target_position (borrar)
 		
 		var time_left = ranged_timer.time_left
 		if time_left <= ranged_blink_start_time:
@@ -194,7 +194,8 @@ func handle_idle_state():
 	show_idle_animation(last_direction)
 	
 	if player_in_ranged_zone and not ranged_attack_active and not player_in_attack_range:
-		start_ranged_attack()
+		#start_ranged_attack() (no deberia inicar ataque en el idle y se agrega pass)
+		pass
 	elif player_in_detection and not player_in_attack_range:
 		current_state = State.CHASING
 	elif player_in_attack_range and attack_timer <= 0 and not is_attacking:
@@ -254,6 +255,10 @@ func handle_ranged_attack_state():
 	if player:
 		last_direction = (player.global_position - global_position).normalized()
 		show_idle_animation(last_direction)
+	
+	#Se agregan las 2 linear de abajo para inicar en ataque de rango en el estado de ataque de rango
+	if player_in_ranged_zone and not ranged_attack_active and not player_in_attack_range:
+		start_ranged_attack()
 
 # ===== ATAQUE CUERPO A CUERPO =====
 
@@ -332,7 +337,7 @@ func start_ranged_attack():
 	
 	print("🎯 Iniciando ataque a distancia")
 	
-	current_state = State.RANGED_ATTACK
+	#current_state = State.RANGED_ATTACK
 	ranged_attack_active = true
 	
 	velocity = Vector2.ZERO
@@ -381,7 +386,8 @@ func execute_ranged_attack():
 	
 	var hitbox_instance = ranged_hitbox_scene.instantiate()
 	get_tree().root.add_child(hitbox_instance)
-	hitbox_instance.global_position = ranged_target_position
+	#hitbox_instance.global_position = ranged_target_position (borrar y cambiar por la linea de abajo)
+	hitbox_instance.global_position = ranged_marker_instance.global_position
 	
 	if hitbox_instance is Area2D:
 		var collision_shape = hitbox_instance.get_node_or_null("CollisionShape2D")
@@ -454,14 +460,20 @@ func _on_ranged_hitbox_body_entered(body, hitbox_instance):
 func _on_detection_zone_entered(body):
 	if body == player:
 		player_in_detection = true
-		if current_state == State.IDLE:
+		#Se agrega la linea de abajo para que detecte que no esta en la zona de ataque de rango
+		player_in_ranged_zone = false
+		#if current_state == State.IDLE: (borrar y dejar el de abajo)
+		if current_state == State.IDLE or current_state == State.RANGED_ATTACK:
 			current_state = State.CHASING
 
 func _on_detection_zone_exited(body):
 	if body == player:
 		player_in_detection = false
+		#Se agrega la linea de abajo para que detecte que esta en la zona de ataque de rango
+		player_in_ranged_zone = true
 		if current_state == State.CHASING:
-			current_state = State.IDLE
+			#current_state = State.IDLE (borrar y dejar el de abajo)
+			current_state = State.RANGED_ATTACK
 
 func _on_attack_zone_entered(body):
 	if body == player:

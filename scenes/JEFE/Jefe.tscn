@@ -1565,10 +1565,9 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangedZone"]
 position = Vector2(7, 3)
 shape = SubResource("CircleShape2D_dublc")
-disabled = true
 debug_color = Color(0.33541772, 0, 0.13166127, 0.41960785)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="RangedTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 

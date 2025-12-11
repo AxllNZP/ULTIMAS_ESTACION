@@ -1,6 +1,6 @@
 [gd_scene load_steps=124 format=3 uid="uid://bmry0a7chw3wj"]
 
-[ext_resource type="PackedScene" uid="uid://bwoo7h6k86jfi" path="res://scenes/player/player.tscn" id="1_eru6m"]
+[ext_resource type="PackedScene" uid="uid://n6p1wcdyijtt" path="res://scenes/player/Jugador.tscn" id="1_eru6m"]
 [ext_resource type="Texture2D" uid="uid://4tq44a1q5br7" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#1.png" id="2_e0snu"]
 [ext_resource type="Texture2D" uid="uid://bkuhfejkup18r" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#2.png" id="3_qcmor"]
 [ext_resource type="Texture2D" uid="uid://wihkh784jxd5" path="res://assets/first_party/characters/enemigo/Sprite_enemies_concept/boceto#3.png" id="4_k83bw"]
