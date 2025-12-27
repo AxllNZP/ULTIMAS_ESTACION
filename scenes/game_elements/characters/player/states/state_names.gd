@@ -4,3 +4,5 @@ extends Resource
 # Define los nombres de los estados como constantes
 const IDLE: String = "Idle"
 const WALK: String = "Walk"
+const ATTACK: String = "Attack"
+const DASH: String = "Dash"

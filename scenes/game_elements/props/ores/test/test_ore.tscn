@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://0w75tncbttgp"]
+[gd_scene load_steps=6 format=3 uid="uid://0w75tncbttgp"]
 
+[ext_resource type="Script" uid="uid://cddwf0s7i6b6p" path="res://scenes/game_elements/props/ores/test/test_ore.gd" id="1_c7nnp"]
 [ext_resource type="Texture2D" uid="uid://co2acqog1bc6f" path="res://assets/first_party/tiles/RPG Nature Tileset.png" id="1_vabgt"]
+[ext_resource type="Script" uid="uid://ci28ivyf6j32v" path="res://scenes/game_elements/props/ores/test/interact_area.gd" id="3_qgk2l"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c7nnp"]
 radius = 5.0
@@ -10,6 +12,9 @@ height = 26.0
 radius = 11.0
 
 [node name="TestOre" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_c7nnp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
@@ -22,8 +27,11 @@ hframes = 20
 vframes = 9
 frame = 22
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("3_qgk2l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_qgk2l")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3wvevyptb7vw"
-path="res://.godot/imported/Human-Worker-Red.png-32fcbeaf67831e34aa29fa32cb770d55.ctex"
+uid="uid://dbjyiychj6mjc"
+path="res://.godot/imported/IDLE_ABAJO_IZQ.png-780750f498a581c1123a1d02a41a65ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_elements/characters/player/Human-Worker-Red.png"
-dest_files=["res://.godot/imported/Human-Worker-Red.png-32fcbeaf67831e34aa29fa32cb770d55.ctex"]
+source_file="res://scenes/game_elements/characters/enemies/test_enemy/components/IDLE_ABAJO_IZQ.png"
+dest_files=["res://.godot/imported/IDLE_ABAJO_IZQ.png-780750f498a581c1123a1d02a41a65ad.ctex"]
 
 [params]
 

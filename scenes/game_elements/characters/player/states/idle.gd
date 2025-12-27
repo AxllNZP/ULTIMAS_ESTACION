@@ -14,9 +14,15 @@ func enter(_previous_state_path: String) -> void:
 	player.play_animation("idle", player.last_direction)
 
 func physics_update(_delta: float) -> void:
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	if direction != Vector2.ZERO:
 		finished.emit(STATE_NAMES.WALK)
 	
 	player.move_and_slide()
+
+func handle_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("attack"):
+		finished.emit(STATE_NAMES.ATTACK)
+	elif Input.is_action_just_pressed("dash"):
+		finished.emit(STATE_NAMES.DASH)
