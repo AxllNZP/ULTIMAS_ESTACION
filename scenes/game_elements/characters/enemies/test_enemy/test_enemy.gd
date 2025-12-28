@@ -1,19 +1,18 @@
-class_name Player
+class_name  Enemy
 extends CharacterBody2D
 
 @export var life : float = 200.0
-
-@export var speed: float = 200.0
+@export var speed: float = 80.0
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var interact_pivot = $InteractPivot
 @onready var state_machine: StateMachine = $StateMachine
-
-#Para ignorar el flip h automatico
-var reverse_flip_h : bool = false
+@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var damage_pivot: Node2D = $DamagePivot
 
 # Variable para rastrear la última dirección
 var last_direction: Vector2 = Vector2.DOWN
+
+var target_player: Player = null
 
 # Función para obtener el sufijo de dirección basado en el vector
 func get_direction_suffix(direction: Vector2) -> String:
@@ -29,20 +28,28 @@ func get_direction_suffix(direction: Vector2) -> String:
 	
 	match sector:
 		0:
+			sprite_2d.flip_h = true
 			return "_left"
 		1:
+			sprite_2d.flip_h = true
 			return "_down_left"
 		2:
+			sprite_2d.flip_h = false
 			return "_down"
 		3:
+			sprite_2d.flip_h = false
 			return "_down_left"
 		4:
+			sprite_2d.flip_h = false
 			return "_left"
 		5:
+			sprite_2d.flip_h = false
 			return "_up_left"
 		6:
+			sprite_2d.flip_h = false
 			return "_up"
 		7:
+			sprite_2d.flip_h = true
 			return "_up_left"
 	return ""
 

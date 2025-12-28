@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://c5ogygftr4xo5"]
+[gd_scene load_steps=11 format=4 uid="uid://c5ogygftr4xo5"]
 
 [ext_resource type="Texture2D" uid="uid://co2acqog1bc6f" path="res://assets/first_party/tiles/RPG Nature Tileset.png" id="1_0pasf"]
 [ext_resource type="Texture2D" uid="uid://6riy6jf124eo" path="res://assets/first_party/tiles/tile_template.png" id="1_iismh"]
 [ext_resource type="PackedScene" uid="uid://c0bsba3wjs3k" path="res://scenes/game_elements/characters/player/player.tscn" id="2_0pg1r"]
 [ext_resource type="PackedScene" uid="uid://0w75tncbttgp" path="res://scenes/game_elements/props/ores/test/test_ore.tscn" id="4_senha"]
+[ext_resource type="PackedScene" uid="uid://djo7otlydek8o" path="res://scenes/game_elements/characters/enemies/test_enemy/test_enemy.tscn" id="5_yj24b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_senha"]
 texture = ExtResource("1_0pasf")
@@ -511,6 +512,8 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." instance=ExtResource("2_0pg1r")]
 position = Vector2(201, 152)
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
 [node name="TestOre" parent="." instance=ExtResource("4_senha")]
 position = Vector2(386.63, 176)
 
@@ -519,3 +522,6 @@ position = Vector2(438, 177)
 
 [node name="TestOre3" parent="." instance=ExtResource("4_senha")]
 position = Vector2(385, 200)
+
+[node name="TestEnemy" parent="." instance=ExtResource("5_yj24b")]
+position = Vector2(847, 135)

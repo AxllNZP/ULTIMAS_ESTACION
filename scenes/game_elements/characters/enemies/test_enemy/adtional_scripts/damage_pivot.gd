@@ -1,6 +1,9 @@
 extends Node2D
 
-@onready var interact_area: Area2D = $InteractArea
+@onready var damage_area: Area2D = $DamageArea
+
+func _ready() -> void:
+	damage_area.area_entered.connect(_on_damage_area_entered)
 
 func get_direction_angle(direction: Vector2) -> float:
 	if direction == Vector2.ZERO:
@@ -10,12 +13,10 @@ func get_direction_angle(direction: Vector2) -> float:
 	var closest_dir = Vector2.RIGHT.rotated(rotated.angle())
 	return closest_dir.angle()
 
+
 func set_direction(direction: Vector2) -> void:
 	if direction != Vector2.ZERO:
 		rotation = get_direction_angle(direction) - PI/2
 
-func get_interactable() -> Node2D:
-	var bodies = interact_area.get_overlapping_bodies()
-	if bodies.size() > 0:
-		return bodies[0]  # O lógica más compleja
-	return null
+func _on_damage_area_entered(area: Area2D) -> void:
+	area.damage(20)

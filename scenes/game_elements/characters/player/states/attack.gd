@@ -62,15 +62,18 @@ func handle_input(_event: InputEvent) -> void:
 				attack_states.ATTACK1:
 					actual_attack_state = attack_states.ATTACK2
 					player.play_animation("attack2",player.last_direction)
+					player.interact_pivot.set_direction(player.last_direction)
 					capture_last_direction = player.last_direction
 				attack_states.ATTACK2:
 					actual_attack_state = attack_states.ATTACK3
 					player.play_animation("attack3",player.last_direction)
+					player.interact_pivot.set_direction(player.last_direction)
 					capture_last_direction = player.last_direction
 					player.reverse_flip_h = true
 				attack_states.ATTACK3:
 					actual_attack_state = attack_states.ATTACK1
 					player.play_animation("attack1",player.last_direction)
+					player.interact_pivot.set_direction(player.last_direction)
 					capture_last_direction = player.last_direction
 					player.reverse_flip_h = false
 		elif Input.is_action_just_pressed("dash"):
